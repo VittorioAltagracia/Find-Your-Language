@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="style.css" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Find your language</title>
+  </head>
+
+  <!-- Project notes
+  2. If there is no input, then display a message like : You need to input a number from 1 to 10.
+   2.1. Add a message to html code, style it and hide it. It should only be shown in this specific case.
+
+  3. Write a logic store users value each time; 
+    3.1. Implement an alarm asking if they speak a certain language
+
+  4. If yes, provide a certain output and style the page. 
+  5. If not, ask them again or promnt to keep playing
+-->
+
+  <body>
+    <div class="square fifth"></div>
+    <div class="square sixth"></div>
+    <!-- decoration squares above -->
+    <h1 class="title">- Let's play a game -</h1>
+    <h2 class="rules">Rules</h2>
+    <header class="rules_desc">
+      <!-- decoration squares below -->
+      <div class="square first"></div>
+      <div class="square second"></div>
+      <div class="square third"></div>
+      <div class="square forth"></div>
+
+      <p>
+        This game is created to help you choose a new language to learn. <br />
+        <strong>How the game works:</strong>
+      </p>
+
+      <!-- Ordered list element -->
+      <ul>
+        <li>
+          <em>"Today I want to play a game!"</em> - button, will activate the
+          game. <br />Once that happens, you will be able to input a random
+          number from 1 to 6. This number will determine which language you
+          should learn. Please remember: If you don't press this button, the
+          game won't start. You only need to press it once. Have fun 🎳
+        </li>
+        <li>
+          <em>"Which one is it going to be?"</em> - press this button once you
+          are ready.
+        </li>
+        <!-- <li>
+          <em>"I can already speak this language!"</em> - use this button when
+          you already speak suggested language.
+        </li> -->
+      </ul>
+    </header>
+
+    <article class="content">
+      <button class="game">Today I want to play a game 🎮!</button>
+      <button class="check">Which one is it going to be?🕵️‍♀️</button>
+
+      <!-- <button class="already">I can already speak this language 💪!</button> -->
+
+      <div>
+        <input type="number" class="yourNumber" />
+        <p class="message hidden"></p>
+      </div>
+
+      <div class="rom-open hidden">
+        <button class="showSp">Spanish</button>
+        <button class="showFr">French</button>
+        <button class="showIt">Italian</button>
+        <button class="showPt">Portuguese</button>
+        <button class="showRm">Romanian</button>
+      </div>
+      <div class="romance-langs">
+        <div class="spanish-modal hidden">
+          <h1>Español/Spanish</h1>
+          <p class="spanish"></p>
+        </div>
+        <!-- <div class="overlay hidden"></div> -->
+
+        <!-- French modal is below -->
+        <div class="french-modal hidden">
+          <h1>French/Français</h1>
+          <p class="french"></p>
+        </div>
+        <!-- italian -->
+        <div class="italian-modal hidden">
+          <h1>Italian/Italiano</h1>
+          <p class="italian"></p>
+        </div>
+        <!-- portuguese -->
+        <div class="portuguese-modal hidden">
+          <h1>Portuguese/Português</h1>
+          <p class="portuguese"></p>
+        </div>
+        <!-- romanian -->
+        <div class="romanian-modal hidden">
+          <h1>Romanian/Romȃneşte</h1>
+          <p class="romanian"></p>
+        </div>
+        <button class="close hidden" type="button">Close</button>
+      </div>
+    </article>
+
+    <footer class="bottom">
+      <img
+        src="/images/ukraine-flag-flag-of-ukraine-ukrainian-flag-ukrainian.jpg"
+        alt="ukrainian flag"
+        height="110"
+        width="auto"
+      />
+      <img
+        src="/images/spanish_flag.jpg"
+        height="110"
+        width="auto"
+        alt="spanish flag"
+      />
+      <img
+        src="/images/japanese-flag.gif"
+        height="110"
+        width="auto"
+        alt="japanese flag"
+      />
+      <img
+        src="/images/Flag_of_Italy.svg.webp"
+        alt="italian flag"
+        height="110"
+        width="auto"
+      />
+      <img
+        src="/images/640px-Flag_of_Brazil.svg.webp"
+        alt="brazilian flag"
+        height="110"
+        width="auto"
+      />
+      <img
+        src="/images/1200px-Flag_of_Germany.svg.webp"
+        alt="italian flag"
+        height="110"
+        width="auto"
+      />
+      <img
+        src="/images/Flag-Thailand.webp"
+        alt="Thai flag"
+        height="110"
+        width="auto"
+      />
+    </footer>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="langInfo.js"></script>
+  </body>
+</html>
