@@ -60,7 +60,7 @@ let forth = document.querySelector('.forth');
 let playing = false;
 
 const responses = {
-  positiveAnswer: `Here are your options`,
+  positiveAnswer: `Here are your options:`,
   anotherOption: `Try a different number. There are still plenty of options left.`,
 };
 
@@ -210,6 +210,8 @@ whichOne.addEventListener('click', function () {
 
     if (usersNum === 2) {
       showColdBlue();
+      romOpen.classList.add('hidden');
+
       const answer = confirm(
         `Hard mode - but may not be as challenging as everything that comes after it - How about learning a Germanic language?`
       );
