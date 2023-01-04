@@ -1,5 +1,12 @@
 'use strict';
 
+const ItFlag = document.querySelector('.ItFlag');
+const meetUplink = document.querySelector('.meetUp-link');
+
+ItFlag.addEventListener('mouseover', function () {
+  meetUplink.classList.toggle('hidden');
+});
+
 export {
   spanishFacts,
   template,

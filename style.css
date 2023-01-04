@@ -143,6 +143,14 @@ button:hover {
   width: 90px;
 }
 
+/* styling links */
+
+a:link {
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 /* Styling decorations */
 
 .first {
