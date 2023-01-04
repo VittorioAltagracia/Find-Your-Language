@@ -5,7 +5,7 @@ import {
   displaySpanish,
   displayPortuguese,
   displayRomanian,
-} from './romLangs.js';
+} from './languageData/romLangs.js';
 export {
   spanishModal,
   romOpen,
