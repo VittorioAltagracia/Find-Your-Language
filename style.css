@@ -5,6 +5,7 @@
 }
 
 body {
+  /* background: linear-gradient(#2068ac, #e1cf0b, #ffffff); */
   background-color: rgb(96, 153, 238);
   position: relative;
 }
@@ -23,7 +24,6 @@ body {
 
 article {
   line-height: 2;
-  /* visibility: hidden; */
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ div {
 .yourNumber {
   margin-top: 30px;
   background: #1d7382;
-  border: 4px rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
   font-family: inherit;
   color: #000000;
   font-size: 4rem;
@@ -73,6 +73,7 @@ div {
   text-align: center;
   display: ruby-base;
   margin-bottom: 3rem;
+  background: linear-gradient(#2970e2, #5f5e5e);
 }
 
 .hidden {
@@ -87,25 +88,59 @@ div {
 
 button {
   border: none;
-  background-color: rgb(127, 137, 255);
-  color: white;
+  background-color: #32c8e2;
+  color: rgb(0, 0, 0);
   font-size: 23px;
+  font-weight: bold;
   margin: 25px;
-  border: 3px black solid;
+  border: 1px black solid;
   padding: 7px;
   cursor: pointer;
+  width: 300px;
 }
 
 button:hover {
-  background-color: rgb(50, 200, 226);
+  background-color: #3255e2;
   color: black;
 }
 
-.already {
-  /* visibility: hidden; */
+.showSp,
+.showIt,
+.showFr,
+.showPt,
+.showRm {
+  width: 130px;
+  background-color: #de5d08;
+  font-weight: lighter;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.check {
+.showSp:hover {
+  background-color: orangered;
+  color: orange;
+}
+
+.showFr:hover {
+  background-color: #4f4fd7, 63%, 58%;
+  color: #fff;
+}
+
+.showIt:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.showPt:hover {
+  background-color: #82d646;
+  color: yellow;
+}
+
+.showRm:hover {
+  background-color: rgb(77, 77, 175);
+  color: #b37b67;
+}
+.close {
+  width: 90px;
 }
 
 /* Styling decorations */

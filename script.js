@@ -5,6 +5,7 @@ import {
   displaySpanish,
   displayPortuguese,
   displayRomanian,
+  DontShowRomanceContent,
 } from './languageData/romLangs.js';
 export {
   spanishModal,
@@ -91,9 +92,7 @@ function showColdBlue() {
 }
 
 function showOrange() {
-  document.querySelector(
-    'body'
-  ).style.backgroundColor = `${langColors.romance}`;
+  document.querySelector('body').style.background = `${langColors.romance}`;
   whiteText();
   squaresBackToBlack();
 }
@@ -155,7 +154,7 @@ const closeThemAll = function () {
   });
 };
 
-start.addEventListener('mouseover', function () {
+start.addEventListener('click', function () {
   inputField.style.backgroundColor = '#f69898';
   inputField.style.border = '3px solid rgb(0, 0, 0)';
 });
@@ -170,7 +169,7 @@ start.addEventListener('click', function () {
 
   inputField.style.backgroundColor = '#f69898';
   inputField.style.width = '15%';
-  inputField.style.marginbottom = '10px';
+  inputField.style.marginBottom = '10px';
 
   inputField.style.border = '3px solid rgb(0, 0, 0)';
 });
@@ -209,9 +208,8 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 2) {
+      DontShowRomanceContent();
       showColdBlue();
-      romOpen.classList.add('hidden');
-
       const answer = confirm(
         `Hard mode - but may not be as challenging as everything that comes after it - How about learning a Germanic language?`
       );
@@ -222,6 +220,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 4) {
+      DontShowRomanceContent();
       BlackNWhite();
       const answer = confirm(`How about learning a Slavic language?`);
       answer
@@ -233,6 +232,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 5) {
+      DontShowRomanceContent();
       showRed();
       const answer = confirm(
         `Fancy a challenge? How about learning an Asian language?`
@@ -244,6 +244,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 6) {
+      DontShowRomanceContent();
       showYellow();
       const answer = confirm(`How about learning an Indo-Iranian language?`);
 
@@ -253,6 +254,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 1) {
+      DontShowRomanceContent();
       showCyan();
       const answer = confirm(
         `Would you like to find out more about Austronesian languages?`

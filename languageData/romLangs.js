@@ -16,6 +16,7 @@ export {
   displaySpanish,
   displayPortuguese,
   displayRomanian,
+  DontShowRomanceContent,
 };
 import {
   spanishModal,
@@ -30,6 +31,7 @@ import {
   showRm,
   closeBtn,
   closeThemAll,
+  romOpen,
 } from '/script.js';
 
 const spanishFacts = {
@@ -90,10 +92,14 @@ function hideRm() {
   romanianModal.classList.add('hidden');
 }
 
+const DontShowRomanceContent = function () {
+  romOpen.classList.add('hidden');
+};
+
 // logic for Manipulating Modal windows
 
 const displaySpanish = function () {
-  showSp.addEventListener('mouseover', function () {
+  showSp.addEventListener('click', function () {
     spanishModal.classList.remove('hidden');
     closeBtn.classList.remove('hidden');
     closeThemAll();
@@ -107,7 +113,7 @@ const displaySpanish = function () {
 };
 
 const displayFrench = function () {
-  showFr.addEventListener('mouseover', function () {
+  showFr.addEventListener('click', function () {
     frenchModal.classList.remove('hidden');
     closeBtn.classList.remove('hidden');
     closeThemAll();
@@ -121,7 +127,7 @@ const displayFrench = function () {
 };
 
 const displayItalian = function () {
-  showIt.addEventListener('mouseover', function () {
+  showIt.addEventListener('click', function () {
     italianModal.classList.remove('hidden');
     closeBtn.classList.remove('hidden');
     closeThemAll();
@@ -134,7 +140,7 @@ const displayItalian = function () {
   });
 };
 const displayPortuguese = function () {
-  showPt.addEventListener('mouseover', function () {
+  showPt.addEventListener('click', function () {
     portugueseModal.classList.remove('hidden');
     closeBtn.classList.remove('hidden');
     closeThemAll();
@@ -148,7 +154,7 @@ const displayPortuguese = function () {
 };
 
 const displayRomanian = function () {
-  showRm.addEventListener('mouseover', function () {
+  showRm.addEventListener('click', function () {
     romanianModal.classList.remove('hidden');
     closeBtn.classList.remove('hidden');
     closeThemAll();
