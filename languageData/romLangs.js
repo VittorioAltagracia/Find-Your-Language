@@ -43,40 +43,43 @@ import {
 
 const spanishFacts = {
   lang: 'Spanish',
-  numSpeakers: 500,
-  countries: 'Bolivia, Spain, Mexico',
+  numSpeakers: 534,
+  countries:
+    'Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Equatorial Guinea, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Spain, Uruguay, Venezuela, Puerto Rico, United States, Beliz',
   popularity: '2nd',
 };
 
 const frenchFacts = {
   lang: 'French',
-  numSpeakers: 210,
-  countries: 'Canada, France',
-  popularity: '9th',
+  numSpeakers: 280,
+  countries:
+    'Canada, France, Belgium, Benin, Burkina Faso, Burundi, Cameroon, Canada, Chad, the Ivory Coast, the Democratic Republic of the Congo, Djibouti, Equatorial Guinea, Haiti, Luxembourg, Madagascar, Mali, Monaco, Niger, Rwanda, Senegal, Seychelles, Switzerland, Togo and Vanuatu',
+  popularity: '5th',
 };
 
 const italianFacts = {
   lang: 'Italian',
-  numSpeakers: 90,
-  countries: 'Italy, Switzerland, South Tyrol',
+  numSpeakers: 66,
+  countries: `Italy, Switzerland, San Marino, Vatican City, 'Istria County in Croatia' and 'Slovene Istria in Slovenia'`,
   popularity: '20th',
 };
 
 const portugueseFacts = {
   lang: 'Portuguese',
-  numSpeakers: 300,
-  countries: 'Brazil, Portugal, Cabo Verde',
-  popularity: '5th',
+  numSpeakers: 258,
+  countries:
+    'Brazil, Mozambique, Angola, Portugal, Guinea-Bissau, East Timor, Equatorial Guinea, Macau, Cape Verde, and São Tomé and Príncipe',
+  popularity: '9th',
 };
 
 const romanianFacts = {
   lang: 'Romanian',
-  numSpeakers: 70,
-  countries: 'Romania, Moldova',
+  numSpeakers: '25 - 29',
+  countries: 'Romania, Republic of Moldova, Ukraine, Serbia, Bulgaria, Hungary',
   popularity: '25th',
 };
 
-const template = 'Here is the list of countries where this language is spoken';
+const template = 'Here is the list of countries where this language is spoken:';
 
 // hiding modals
 function hideSp() {
