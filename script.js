@@ -7,6 +7,13 @@ import {
   displayRomanian,
   DontShowRomanceContent,
 } from './languageData/romLangs.js';
+
+import {
+  displaySlavicLangs,
+  showSerb,
+  showUkr,
+} from './languageData/slvcLangs.js';
+
 export {
   spanishModal,
   romOpen,
@@ -223,12 +230,18 @@ whichOne.addEventListener('click', function () {
       DontShowRomanceContent();
       BlackNWhite();
       const answer = confirm(`How about learning a Slavic language?`);
-      answer
-        ? displayMessage(`${responses.positiveAnswer}`)
-        : displayMessage(`${responses.anotherOption}`);
 
-      inputField.style.backgroundColor = '#fff';
-      inputField.style.color = '#111';
+      if (answer) {
+        displayMessage(`${responses.positiveAnswer}`);
+        displaySlavicLangs();
+        // inputField.style.backgroundColor = '#fff';
+        // inputField.style.color = '#111';
+      } else {
+        displayMessage(`${responses.anotherOption}`);
+      }
+      // answer
+      //   ? displayMessage(`${responses.positiveAnswer}`) && displaySlavicLangs()
+      //   : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 5) {

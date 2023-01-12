@@ -1,4 +1,12 @@
 'use strict';
+export { displaySlavicLangs, showSerb, showUkr };
+
+import { template } from './romLangs.js';
+
+const slvOpen = document.querySelector('.slv-open');
+const showUkr = document.querySelector('.showUkr');
+const showSerb = document.querySelector('.showSerb');
+const urkModal = document.querySelector('.ukrainian-modal');
 
 const ukranianFacts = {
   lang: 'Ukrainian',
@@ -34,4 +42,20 @@ const chechFacts = {
   numSpeakers: 10.7,
   countries: 'Czech Republic',
   popularity: '86th',
+};
+
+const displaySlavicLangs = function () {
+  slvOpen.classList.remove('hidden');
+  showUkr.addEventListener('click', () => {
+    const clicked = true;
+    if (clicked) {
+      urkModal.classList.remove('hidden');
+      urkModal.textContent = `${ukranianFacts.lang} is spoken by ${ukranianFacts.numSpeakers} million speakers. ${template} ${ukranianFacts.countries}. It is a ${ukranianFacts.popularity} most spoken language in the world!`;
+    }
+  });
+  showSerb.addEventListener('click', () => {
+    const clicked = true;
+    if (clicked) {
+    }
+  });
 };
