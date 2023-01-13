@@ -14,6 +14,10 @@ const ukranianFacts = {
   numSpeakers: 40,
   countries: 'Ukraine',
   popularity: '26th',
+
+  displayUkr: function () {
+    ukrModal.textContent = `${this.lang} is spoken by ${this.numSpeakers} million speakers. ${template} ${this.countries}. It is a ${this.popularity} most spoken language in the world!`;
+  },
 };
 
 const russianFacts = {
@@ -48,14 +52,19 @@ const chechFacts = {
 const hideUkr = function () {
   ukrModal.classList.add('hidden');
 };
+const hideSerb = function () {
+  serbModal.classList.add('hidden');
+};
 
 const displaySlavicLangs = function () {
   slvOpen.classList.remove('hidden');
   showUkr.addEventListener('click', () => {
     const clicked = true;
     if (clicked) {
+      hideSerb();
       ukrModal.classList.remove('hidden');
-      ukrModal.textContent = `${ukranianFacts.lang} is spoken by ${ukranianFacts.numSpeakers} million speakers. ${template} ${ukranianFacts.countries}. It is a ${ukranianFacts.popularity} most spoken language in the world!`;
+
+      ukranianFacts.displayUkr();
     }
   });
   showSerb.addEventListener('click', () => {

@@ -234,14 +234,9 @@ whichOne.addEventListener('click', function () {
       if (answer) {
         displayMessage(`${responses.positiveAnswer}`);
         displaySlavicLangs();
-        // inputField.style.backgroundColor = '#fff';
-        // inputField.style.color = '#111';
       } else {
         displayMessage(`${responses.anotherOption}`);
       }
-      // answer
-      //   ? displayMessage(`${responses.positiveAnswer}`) && displaySlavicLangs()
-      //   : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 5) {
