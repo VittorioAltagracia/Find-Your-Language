@@ -6,7 +6,8 @@ import { template } from './romLangs.js';
 const slvOpen = document.querySelector('.slv-open');
 const showUkr = document.querySelector('.showUkr');
 const showSerb = document.querySelector('.showSerb');
-const urkModal = document.querySelector('.ukrainian-modal');
+const ukrModal = document.querySelector('.ukrainian-modal');
+const serbModal = document.querySelector('.serbian-modal');
 
 const ukranianFacts = {
   lang: 'Ukrainian',
@@ -44,18 +45,25 @@ const chechFacts = {
   popularity: '86th',
 };
 
+const hideUkr = function () {
+  ukrModal.classList.add('hidden');
+};
+
 const displaySlavicLangs = function () {
   slvOpen.classList.remove('hidden');
   showUkr.addEventListener('click', () => {
     const clicked = true;
     if (clicked) {
-      urkModal.classList.remove('hidden');
-      urkModal.textContent = `${ukranianFacts.lang} is spoken by ${ukranianFacts.numSpeakers} million speakers. ${template} ${ukranianFacts.countries}. It is a ${ukranianFacts.popularity} most spoken language in the world!`;
+      ukrModal.classList.remove('hidden');
+      ukrModal.textContent = `${ukranianFacts.lang} is spoken by ${ukranianFacts.numSpeakers} million speakers. ${template} ${ukranianFacts.countries}. It is a ${ukranianFacts.popularity} most spoken language in the world!`;
     }
   });
   showSerb.addEventListener('click', () => {
     const clicked = true;
     if (clicked) {
+      hideUkr();
+      serbModal.classList.remove('hidden');
+      serbModal.textContent = `${serbianFacts.lang} is spoken by ${serbianFacts.numSpeakers} million speakers. ${template} ${serbianFacts.countries}. It is a ${serbianFacts.popularity} most spoken language in the world!`;
     }
   });
 };
