@@ -5,7 +5,7 @@ import {
   displaySpanish,
   displayPortuguese,
   displayRomanian,
-  DontShowRomanceContent,
+  dontShowRomanceContent,
 } from './languageData/romLangs.js';
 
 import {
@@ -215,7 +215,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 2) {
-      DontShowRomanceContent();
+      dontShowRomanceContent();
       showColdBlue();
       const answer = confirm(
         `Hard mode - but may not be as challenging as everything that comes after it - How about learning a Germanic language?`
@@ -227,7 +227,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 4) {
-      DontShowRomanceContent();
+      dontShowRomanceContent();
       BlackNWhite();
       const answer = confirm(`How about learning a Slavic language?`);
 
@@ -240,7 +240,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 5) {
-      DontShowRomanceContent();
+      dontShowRomanceContent();
       showRed();
       const answer = confirm(
         `Fancy a challenge? How about learning an Asian language?`
@@ -252,7 +252,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 6) {
-      DontShowRomanceContent();
+      dontShowRomanceContent();
       showYellow();
       const answer = confirm(`How about learning an Indo-Iranian language?`);
 
@@ -262,7 +262,7 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 1) {
-      DontShowRomanceContent();
+      dontShowRomanceContent();
       showCyan();
       const answer = confirm(
         `Would you like to find out more about Austronesian languages?`

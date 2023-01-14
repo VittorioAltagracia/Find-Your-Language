@@ -23,7 +23,7 @@ export {
   displaySpanish,
   displayPortuguese,
   displayRomanian,
-  DontShowRomanceContent,
+  dontShowRomanceContent,
 };
 import {
   spanishModal,
@@ -102,7 +102,7 @@ function hideRm() {
   romanianModal.classList.add('hidden');
 }
 
-const DontShowRomanceContent = function () {
+const dontShowRomanceContent = function () {
   romOpen.classList.add('hidden');
 };
 
