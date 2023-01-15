@@ -36,7 +36,7 @@
   width: 70%;
 
   color: black;
-  background: linear-gradient(rgb(250, 250, 250), rgb(255, 0, 0));
+  background: linear-gradient(rgb(250, 250, 250), rgb(238, 53, 53));
   padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
@@ -66,9 +66,22 @@
   width: 70%;
 
   color: black;
-  background: linear-gradient(blue, yellow);
+  background: conic-gradient(white, rgb(204, 101, 101), blue);
   padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
+}
+
+/* Buttons */
+
+.showUkr,
+.showRu,
+.showPol,
+.showSerb,
+.showCz {
+  width: 130px;
+  background-color: #ffffff;
+  font-weight: lighter;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

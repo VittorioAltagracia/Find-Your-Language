@@ -12,6 +12,7 @@ import {
   displaySlavicLangs,
   showSerb,
   showUkr,
+  hideElements,
 } from './languageData/slvcLangs.js';
 
 export {
@@ -27,7 +28,7 @@ export {
   showPt,
   showRm,
   closeBtn,
-  closeThemAll,
+  showCloseButton,
 };
 
 const start = document.querySelector('.game');
@@ -82,6 +83,11 @@ const langColors = {
   indoIr: '#dcd73a',
   austronesian: '#3adcbc',
 };
+
+function changeColorBigButtons() {
+  start.style.backgroundColor = langColors.romance;
+  whichOne.style.backgroundColor = langColors.romance;
+}
 
 function squaresBackToBlack() {
   first.style.backgroundColor = '#000';
@@ -149,36 +155,24 @@ function displayMessage(message) {
   noInput.classList.remove('hidden');
 }
 
-// logic for Manipulating Modal windows
-
-const closeThemAll = function () {
-  closeBtn.addEventListener('click', function () {
-    spanishModal.classList.add('hidden');
-    frenchModal.classList.add('hidden');
-    italianModal.classList.add('hidden');
-    portugueseModal.classList.add('hidden');
-    romanianModal.classList.add('hidden');
-  });
+const showCloseButton = function () {
+  closeBtn.classList.remove('hidden');
 };
-
-start.addEventListener('click', function () {
-  inputField.style.backgroundColor = '#f69898';
-  inputField.style.border = '3px solid rgb(0, 0, 0)';
-});
 
 start.addEventListener('click', function () {
   playing = true;
   const response = confirm(`Are you ready to start playing?`);
-  response
-    ? (document.querySelector('body').style.backgroundColor = '#bc9fbc') &&
-      displayMessage(`You are all set. Input a number from 1 to 6.`)
-    : displayMessage(`Come back when you are ready.`);
+  if (response) {
+    document.querySelector('body').style.backgroundColor = '#bc9fbc';
+    inputField.style.backgroundColor = '#f69898';
+    inputField.style.width = '15%';
+    inputField.style.marginBottom = '10px';
+    inputField.style.border = '3px solid rgb(0, 0, 0)';
 
-  inputField.style.backgroundColor = '#f69898';
-  inputField.style.width = '15%';
-  inputField.style.marginBottom = '10px';
-
-  inputField.style.border = '3px solid rgb(0, 0, 0)';
+    displayMessage(`You are all set. Input a number from 1 to 6.`);
+  } else {
+    displayMessage(`Come back when you are ready.`);
+  }
 });
 
 whichOne.addEventListener('click', function () {
@@ -196,14 +190,16 @@ whichOne.addEventListener('click', function () {
 
     // !Logic in terms of numbers starts here!
     if (usersNum === 3) {
-      showOrange();
       const answer = confirm(
         `Don't you dare to say that being fluent in those languages is easy! Romance languages?`
       );
 
       if (answer) {
         romOpen.classList.remove('hidden');
+        showOrange();
+        hideElements.dontShowSlavicContent();
         displayMessage(`${responses.positiveAnswer}`);
+        changeColorBigButtons();
         displaySpanish();
         displayFrench();
         displayItalian();
@@ -215,61 +211,63 @@ whichOne.addEventListener('click', function () {
     }
 
     if (usersNum === 2) {
-      dontShowRomanceContent();
-      showColdBlue();
       const answer = confirm(
         `Hard mode - but may not be as challenging as everything that comes after it - How about learning a Germanic language?`
       );
 
       answer
-        ? displayMessage(`${responses.positiveAnswer}`)
+        ? (displayMessage(`${responses.positiveAnswer}`),
+          dontShowRomanceContent(),
+          hideElements.dontShowSlavicContent(),
+          showColdBlue())
         : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 4) {
-      dontShowRomanceContent();
-      BlackNWhite();
       const answer = confirm(`How about learning a Slavic language?`);
 
-      if (answer) {
-        displayMessage(`${responses.positiveAnswer}`);
-        displaySlavicLangs();
-      } else {
-        displayMessage(`${responses.anotherOption}`);
-      }
+      answer
+        ? (displayMessage(`${responses.positiveAnswer}`),
+          BlackNWhite(),
+          dontShowRomanceContent(),
+          displaySlavicLangs())
+        : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 5) {
-      dontShowRomanceContent();
-      showRed();
       const answer = confirm(
         `Fancy a challenge? How about learning an Asian language?`
       );
 
       answer
-        ? displayMessage(`${responses.positiveAnswer}`)
+        ? (displayMessage(`${responses.positiveAnswer}`),
+          dontShowRomanceContent(),
+          hideElements.dontShowSlavicContent(),
+          showRed())
         : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 6) {
-      dontShowRomanceContent();
-      showYellow();
       const answer = confirm(`How about learning an Indo-Iranian language?`);
 
       answer
-        ? displayMessage(`${responses.positiveAnswer}`)
+        ? (displayMessage(`${responses.positiveAnswer}`),
+          dontShowRomanceContent(),
+          hideElements.dontShowSlavicContent(),
+          showYellow())
         : displayMessage(`${responses.anotherOption}`);
     }
 
     if (usersNum === 1) {
-      dontShowRomanceContent();
-      showCyan();
       const answer = confirm(
         `Would you like to find out more about Austronesian languages?`
       );
 
       answer
-        ? displayMessage(`${responses.positiveAnswer}`)
+        ? (displayMessage(`${responses.positiveAnswer}`),
+          dontShowRomanceContent(),
+          hideElements.dontShowSlavicContent(),
+          showCyan())
         : displayMessage(`${responses.anotherOption}`);
     }
   }

@@ -37,8 +37,8 @@ import {
   showPt,
   showRm,
   closeBtn,
-  closeThemAll,
   romOpen,
+  showCloseButton,
 } from '/script.js';
 
 const spanishFacts = {
@@ -104,6 +104,16 @@ function hideRm() {
 
 const dontShowRomanceContent = function () {
   romOpen.classList.add('hidden');
+};
+
+const closeThemAll = function () {
+  closeBtn.addEventListener('click', function () {
+    spanishModal.classList.add('hidden');
+    frenchModal.classList.add('hidden');
+    italianModal.classList.add('hidden');
+    portugueseModal.classList.add('hidden');
+    romanianModal.classList.add('hidden');
+  });
 };
 
 // logic for Manipulating Modal windows
