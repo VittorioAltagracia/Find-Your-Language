@@ -226,70 +226,75 @@ a:link {
 
 .spanish-modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  padding: 6rem;
+  color: black;
+  background: linear-gradient(#ff4d00, rgb(255, 234, 0), #ff4d00);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
 
 .french-modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  padding: 6rem;
+  color: black;
+  background: linear-gradient(0.25turn, #4f4fd7, #f8f8f8, red);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
 
 .italian-modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  padding: 6rem;
+  color: black;
+  background: linear-gradient(0.25turn, #0e8a0e, #f8f8f8, red);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
 
 .portuguese-modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  padding: 6rem;
+  color: black;
+  background: radial-gradient(#4f4fd7, rgb(255, 234, 0), #4f4);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
 
 .romanian-modal {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 50%;
 
-  background-color: rgb(0, 0, 0);
-  padding: 6rem;
+  color: black;
+  background: linear-gradient(0.25turn, #4f4fd7, #e1aa35, red);
+  padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
