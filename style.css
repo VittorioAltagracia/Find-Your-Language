@@ -36,10 +36,8 @@ article {
 .rules_desc {
   width: 1000px;
   padding: 20px 42px;
-  /* padding-top: 20px; */
   margin-top: 20px;
   margin-left: 60px auto;
-  /* border: 4px rgb(151, 94, 94) solid; */
   line-height: 2;
   border: 2px black solid;
 }
