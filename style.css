@@ -5,7 +5,6 @@
 }
 
 body {
-  /* background: linear-gradient(#2068ac, #e1cf0b, #ffffff); */
   background-color: rgb(96, 153, 238);
   position: relative;
 }
@@ -18,8 +17,9 @@ body {
   margin: 0px;
   padding: 13px 0;
   padding-bottom: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Coiny';
   background-color: rgb(196, 207, 222);
+  background-color: #f9dddd;
 }
 
 article {
@@ -29,17 +29,43 @@ article {
 
 .rules {
   text-align: center;
-  margin-top: 30px;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-family: 'sono';
 }
 
 .rules_desc {
-  width: 1000px;
-  padding: 20px 42px;
-  margin-top: 20px;
-  margin-left: 60px auto;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  background-color: #f9dddd;
+}
+
+.explanation {
+  border-right: 1px black solid;
+  flex: 3 2;
+  line-height: 3;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.cute-chibi {
+  padding: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+.additional-info {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex: 1 5;
+  /* background: linear-gradient(#057ff2, #ffec1e, #686868); */
+  border-left: 1px black solid;
   line-height: 2;
-  border: 2px black solid;
+  padding: 12px;
 }
 
 header {
@@ -54,9 +80,9 @@ div {
   margin-left: 2px;
   margin-bottom: 0;
   margin-top: 120px;
-  display: inline-block;
-  background-color: #333537;
-  border-top: solid 3px #333537;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2px;
 }
 
 .yourNumber {
@@ -94,7 +120,8 @@ button {
   border: 1px black solid;
   padding: 7px;
   cursor: pointer;
-  width: 300px;
+  width: 250px;
+  font-family: 'sono';
 }
 
 button:hover {
@@ -151,52 +178,12 @@ a:link {
 
 /* Styling decorations */
 
-.first {
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 146px;
-  left: 276px;
-  background-color: black;
-  display: inline-block;
-}
-
-.second {
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 414px;
-  left: 276px;
-  background-color: black;
-  display: inline-block;
-}
-
-.third {
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 144px;
-  right: 276px;
-  background-color: black;
-  display: inline-block;
-}
-
-.forth {
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 414px;
-  right: 276px;
-  background-color: #000;
-  display: inline-block;
-}
-
 .fifth {
   height: 25px;
   width: 25px;
   position: absolute;
-  top: 29px;
-  left: 560px;
+  top: 32px;
+  left: 590px;
   background-color: #000;
   display: inline-block;
 }
@@ -205,8 +192,8 @@ a:link {
   height: 25px;
   width: 25px;
   position: absolute;
-  top: 29px;
-  right: 560px;
+  top: 32px;
+  right: 590px;
   background-color: black;
   display: inline-block;
 }
@@ -295,4 +282,41 @@ a:link {
   border-radius: 5px;
   box-shadow: 0 2rem 3rem rgba(255, 255, 255, 0.3);
   z-index: 10;
+}
+
+ul {
+  list-style: none;
+}
+
+.squares {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-bottom: 13px;
+}
+
+.first {
+  background-color: #000000;
+  width: 17px;
+  height: 17px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.second {
+  height: 17px;
+  width: 17px;
+  background-color: rgb(255, 2, 2);
+}
+
+.third {
+  background-color: #000000;
+  width: 17px;
+  height: 17px;
+}
+
+.forth {
+  background-color: #ff0000;
+  width: 17px;
+  height: 17px;
 }

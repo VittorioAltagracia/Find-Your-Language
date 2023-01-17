@@ -84,11 +84,6 @@ const langColors = {
   austronesian: '#3adcbc',
 };
 
-function changeColorBigButtons() {
-  start.style.backgroundColor = langColors.romance;
-  whichOne.style.backgroundColor = langColors.romance;
-}
-
 function squaresBackToBlack() {
   first.style.backgroundColor = '#000';
   second.style.backgroundColor = '#000';
@@ -199,7 +194,6 @@ whichOne.addEventListener('click', function () {
         showOrange();
         hideElements.dontShowSlavicContent();
         displayMessage(`${responses.positiveAnswer}`);
-        changeColorBigButtons();
         displaySpanish();
         displayFrench();
         displayItalian();
