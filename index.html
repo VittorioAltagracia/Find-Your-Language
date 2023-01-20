@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" />
     <link href="/styleFiles/slavicModalStyle.css" rel="stylesheet" />
     <meta charset="UTF-8" />
@@ -25,7 +28,7 @@
     <header>
       <div class="rules_desc">
         <!-- decoration squares below -->
-        
+
         <div class="explanation">
           <p>
             This game is created to help you choose a new language to learn.
@@ -50,8 +53,13 @@
             </li>
           </ul>
         </div>
-        <img class="cute-chibi " src="/images/Chibi4-page-001.jpg" alt="cute chibi version of creator of the page" height="300"
-        width="300"/>
+        <img
+          class="cute-chibi"
+          src="/images/Chibi4-page-001.jpg"
+          alt="cute chibi version of creator of the page"
+          height="300"
+          width="300"
+        />
         <div class="additional-info">
           <div class="squares">
             <div class="square first"></div>
@@ -59,9 +67,9 @@
             <div class="square third"></div>
             <div class="square forth"></div>
           </div>
-            <p>
-              <ul>
-                <li>
+          <p></p>
+          <ul>
+            <li>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
               necessitatibus sequi laudantium, optio similique doloribus quidem
               ea in ut. Officia perspiciatis quasi quod consectetur molestias!
@@ -70,14 +78,22 @@
             <li>placeholder</li>
             <li>placeholder</li>
             <li>
-              <a class="italian-austin" href="https://www.meetup.com/it-IT/Parliamo-Italiano-a-Austin/" target="_blank">Learn Italian in Austin</a>
+              <a
+                class="italian-austin"
+                href="https://www.meetup.com/it-IT/Parliamo-Italiano-a-Austin/"
+                target="_blank"
+                >Learn Italian in Austin</a
+              >
             </li>
             <li>
-              <a class="github-repo" href="https://github.com/VittorioAltagracia/Find-Your-Language/tree/Reformating-the-UI" target="_blank">Interested in how the code works?</a>
+              <a
+                class="github-repo"
+                href="https://github.com/VittorioAltagracia/Find-Your-Language/tree/Reformating-the-UI"
+                target="_blank"
+                >Interested in how the code works?</a
+              >
             </li>
-
-            </ul>
-            </p>
+          </ul>
         </div>
       </div>
     </header>
@@ -93,36 +109,27 @@
         <p class="message hidden"></p>
       </div>
       <div class="modal-windows">
-        <div class="rom-open hidden">
-          <button class="showSp">Spanish</button>
-          <button class="showFr">French</button>
-          <button class="showIt">Italian</button>
-          <button class="showPt">Portuguese</button>
-          <button class="showRm">Romanian</button>
+        <!-- romance langs -->
+        <div class="romance-content">
+          <div class="rom-open hidden">
+            <button class="showSp">Spanish</button>
+            <button class="showFr">French</button>
+            <button class="showIt">Italian</button>
+            <button class="showPt">Portuguese</button>
+            <button class="showRm">Romanian</button>
+          </div>
+          <div class="romance-langs">
+            <div class="spanish-modal hidden"></div>
+            <div class="french-modal hidden"></div>
+            <div class="italian-modal hidden"></div>
+            <div class="portuguese-modal hidden"></div>
+            <div class="romanian-modal hidden"></div>
+            <!-- <div class="overlay hidden"></div> -->
+          </div>
         </div>
-        <!-- romance langs start here -->
-        <div class="romance-langs">
-          <div class="spanish-modal hidden">
-            <p class="spanish"></p>
-          </div>
-          <!-- <div class="overlay hidden"></div> -->
 
-          <div class="french-modal hidden">
-            <p class="french"></p>
-          </div>
-          <!-- italian -->
-          <div class="italian-modal hidden">
-            <p class="italian"></p>
-          </div>
-          <!-- portuguese -->
-          <div class="portuguese-modal hidden">
-            <p class="portuguese"></p>
-          </div>
-          <!-- romanian -->
-          <div class="romanian-modal hidden">
-            <p class="romanian"></p>
-          </div>
-          <!-- slavic langs start here -->
+        <!-- slavic langs -->
+        <div class="slav-content">
           <div class="slv-open hidden">
             <button class="showUkr">Ukrainian</button>
             <button class="showRu">Russian</button>
@@ -138,6 +145,40 @@
             <div class="czech-modal hidden"></div>
           </div>
         </div>
+        <!-- germanic langs -->
+        <div class="germanic-content">
+          <div class="germanic-open hidden">
+            <button class="showGe">German</button>
+            <button class="showDu">Dutch</button>
+            <button class="showNor">Norwegian</button>
+            <button class="showIce">Icelandic</button>
+            <button class="showSwe">Swedish</button>
+          </div>
+          <div class="germanic-langs">
+            <div class="german-modal hidden"></div>
+            <div class="dutch-modal hidden"></div>
+            <div class="norwegian-modal hidden"></div>
+            <div class="icelandic-modal hidden"></div>
+            <div class="swedish-modal hidden"></div>
+          </div>
+        </div>
+        <!-- austronesian languages -->
+        <div class="austronesian-content">
+          <div class="austronesian-open hidden">
+            <button class="showJav">Javanese</button>
+            <button class="showTag">Tagalog</button>
+            <button class="showMalay">Malagasy</button>
+            <button class="showFij">Fijian</button>
+            <button class="showMaori">Maori</button>
+          </div>
+          <div class="austronesian-langs">
+            <div class="javanese-modal hidden"></div>
+            <div class="tagalog-modal hidden"></div>
+            <div class="malagasy-modal hidden"></div>
+            <div class="fijian-modal hidden"></div>
+            <div class="maori-modal hidden"></div>
+          </div>
+        </div>
         <button class="close hidden" type="button">Close</button>
       </div>
       <a
@@ -149,8 +190,11 @@
     </article>
 
     <footer class="bottom">
-      <img src="/images/Chibi2-page-001.jpg" alt="cute chibi version of creator of this page" height="110"
-      width="170"
+      <img
+        src="/images/Chibi2-page-001.jpg"
+        alt="cute chibi version of creator of this page"
+        height="110"
+        width="170"
       />
       <img
         src="/images/ukraine-flag-flag-of-ukraine-ukrainian-flag-ukrainian.jpg"
@@ -195,7 +239,11 @@
         height="110"
         width="190"
       />
-      <img src="/images/chibi1JPG.jpg" alt="cute chibi version of creator of this page" height="110" width="170"
+      <img
+        src="/images/chibi1JPG.jpg"
+        alt="cute chibi version of creator of this page"
+        height="110"
+        width="170"
       />
     </footer>
     <script type="module" src="script.js"></script>
