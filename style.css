@@ -96,13 +96,6 @@ div {
   grid-row: 1 / 2;
 }
 
-/* .bottom-2nd {
-  margin-left: 2px;
-  margin-bottom: 0;
-  display: flex;
-  gap: 2px;
-} */
-
 .yourNumber {
   margin-top: 30px;
   margin-bottom: 50px;
