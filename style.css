@@ -76,26 +76,6 @@ div {
   text-align: center;
 }
 
-.bottom-1st {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  align-items: end;
-  margin-top: 47px;
-  justify-items: center;
-  row-gap: 5px;
-}
-
-.american-chibi {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.purple-chibi {
-  grid-column: 10 / 11;
-  grid-row: 1 / 2;
-}
-
 .yourNumber {
   margin-top: 30px;
   margin-bottom: 50px;

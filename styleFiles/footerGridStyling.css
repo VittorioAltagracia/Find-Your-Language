@@ -1,0 +1,40 @@
+.bottom-1st {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* align-items: end;
+  justify-items: center; */
+
+  row-gap: 5px;
+}
+
+.test {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 47px;
+}
+
+.american-chibi {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.purple-chibi {
+  grid-column: 10 / 11;
+  grid-row: 1 / 2;
+}
+
+.newZealand-flag {
+  grid-column: 10 / 11;
+  grid-row: 2 / 3;
+}
+
+.czech-flag {
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+}
+
+.norway-flag {
+  grid-column: 7 / 8;
+  grid-row: 2 / 3;
+}
