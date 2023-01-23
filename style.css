@@ -205,7 +205,7 @@ a:link {
 
 .spanish-modal {
   position: absolute;
-  top: 52%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -220,7 +220,7 @@ a:link {
 
 .french-modal {
   position: absolute;
-  top: 52%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -235,7 +235,7 @@ a:link {
 
 .italian-modal {
   position: absolute;
-  top: 52%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -250,7 +250,7 @@ a:link {
 
 .portuguese-modal {
   position: absolute;
-  top: 52%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
@@ -265,7 +265,7 @@ a:link {
 
 .romanian-modal {
   position: absolute;
-  top: 52%;
+  top: 79%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
