@@ -5,20 +5,9 @@ const germOpen = document.querySelector('.germanic-open');
 const germModals = document.querySelector('.germanic-langs');
 //germanic modals
 const gerModal = document.querySelector('.german-modal');
-// const dutModal = document.querySelector('.dutch-modal');
-// const norModal = document.querySelector('.norwegian-modal');
-// const iceModal = document.querySelector('.icelandic-modal');
-// const swdModal = document.querySelector('.swedish-modal');
 
 // germanic buttons
 const showGe = document.querySelector('.showGe');
-// const showDu = document.querySelector('.showDu');
-// const showNor = document.querySelector('.showNor');
-// const showIce = document.querySelector('.showIce');
-// const showSwe = document.querySelector('.showSwe');
-
-// overlay
-// const overlay = document.querySelector('.overlay');
 
 export { germOpen };
 
@@ -64,20 +53,34 @@ const viktorsArr = [
 germModals.innerHTML = '';
 
 // populateModals(viktorsArr);
+async function loadData() {
+  const response = await fetch(
+    'https://zzcweidajbddjoyoebeh.supabase.co/rest/v1/general_info',
+    {
+      headers: {
+        apikey:
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6Y3dlaWRhamJkZGpveW9lYmVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzUyMjY0MDMsImV4cCI6MTk5MDgwMjQwM30.3JlrhMmw-BoXOxxdrYGaXGRVOMlwC60FJI8TVLvb4dU',
+        authorization:
+          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6Y3dlaWRhamJkZGpveW9lYmVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzUyMjY0MDMsImV4cCI6MTk5MDgwMjQwM30.3JlrhMmw-BoXOxxdrYGaXGRVOMlwC60FJI8TVLvb4dU',
+      },
+    }
+  );
+  const data = await response.json();
+  console.log(data);
+  populateModals(data);
+}
 
 function populateModals(myArr) {
   const testArr = myArr.map(
     info =>
       `<p class="germanic-test">
-        ${info.lang}, ${info.numSpeakers}, ${info.countries}, ${info.popularity}
+        ${info.info}
         </p>`
   );
 
   const updatedArr = testArr.join('');
   germModals.insertAdjacentHTML('afterbegin', updatedArr);
 }
-
-// germOpen.classList.remove('hidden');
 
 function unHide() {
   if (germModals.classList.contains('hidden')) {
@@ -92,7 +95,7 @@ showGe.addEventListener(
     if (clicked) {
       unHide();
       // const viktorsData = viktorsArr.filter(info => info.id === 1);
-      populateModals(viktorsArr);
+      loadData();
     }
   },
   { once: true }
