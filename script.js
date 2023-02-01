@@ -8,12 +8,9 @@ import {
   dontShowRomanceContent,
 } from './languageData/romLangs.js';
 
-import {
-  displaySlavicLangs,
-  showSerb,
-  showUkr,
-  hideElements,
-} from './languageData/slvcLangs.js';
+import { displaySlavicLangs, hideElements } from './languageData/slvcLangs.js';
+
+import { germOpen } from './languageData/germnLangs.js';
 
 export {
   spanishModal,
@@ -31,13 +28,81 @@ export {
   showCloseButton,
 };
 
+// learning new stuff
+// const lvlOfDifficulty = [1, 2, 3, 4].forEach(function (el) {
+//   console.log(`Here are the difficulty levels for all languages - ${el}`);
+// });
+
+// const times10 = [1, 2, 3, 4].map(function (el) {
+//   return el * 10;
+// });
+// console.log(times10);
+
+// const times10 = [1, 2, 3, 4].map(el => el * 10);
+// console.log(times10);
+
+// const CATEGORIES = [
+//   { name: 'technology', color: '#3b82f6' },
+//   { name: 'science', color: '#16a34a' },
+//   { name: 'finance', color: '#ef4444' },
+//   { name: 'society', color: '#eab308' },
+//   { name: 'entertainment', color: '#db2777' },
+//   { name: 'health', color: '#14b8a6' },
+//   { name: 'history', color: '#f97316' },
+//   { name: 'news', color: '#8b5cf6' },
+// ];
+
+// const allCategories = CATEGORIES.map(el => el.name);
+// console.log(allCategories);
+// // CATEGORIES.map(el => console.log(el.name));
+
+// const initialFacts = [
+//   {
+//     id: 1,
+//     text: 'React is being developed by Meta (formerly facebook)',
+//     source: 'https://opensource.fb.com/',
+//     category: 'technology',
+//     votesInteresting: 24,
+//     votesMindblowing: 9,
+//     votesFalse: 4,
+//     createdIn: 2021,
+//   },
+//   {
+//     id: 2,
+//     text: 'Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%',
+//     source:
+//       'https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids',
+//     category: 'society',
+//     votesInteresting: 11,
+//     votesMindblowing: 2,
+//     votesFalse: 0,
+//     createdIn: 2019,
+//   },
+//   {
+//     id: 3,
+//     text: 'Lisbon is the capital of Portugal',
+//     source: 'https://en.wikipedia.org/wiki/Lisbon',
+//     category: 'society',
+//     votesInteresting: 8,
+//     votesMindblowing: 3,
+//     votesFalse: 1,
+//     createdIn: 2015,
+//   },
+// ];
+
+// const factAges = initialFacts.map(el => 2023 - el.createdIn);
+// console.log(factAges);
+// console.log(factAges.join('_|_'));
+
+//
+
 const start = document.querySelector('.game');
 const noInput = document.querySelector('.message');
 const inputField = document.querySelector('.yourNumber');
-const alreadyCan = document.querySelector('.already');
+// const alreadyCan = document.querySelector('.already');
 const whichOne = document.querySelector('.check');
-const bottom = document.querySelector('.bottom');
-// !!! selecting modals and buttons !!!
+// const bottom = document.querySelector('.bottom');
+// ! selecting modals and buttons !
 
 // Spanish
 const spanishModal = document.querySelector('.spanish-modal');
@@ -213,6 +278,7 @@ whichOne.addEventListener('click', function () {
         ? (displayMessage(`${responses.positiveAnswer}`),
           dontShowRomanceContent(),
           hideElements.dontShowSlavicContent(),
+          germOpen.classList.remove('hidden'),
           showColdBlue())
         : displayMessage(`${responses.anotherOption}`);
     }
@@ -266,13 +332,3 @@ whichOne.addEventListener('click', function () {
     }
   }
 });
-
-// COME BACK TO THIS WHEN YOU LEARN MORE
-// first.style.width = '25px';
-// first.style.height = '25px';
-// second.style.width = '25px';
-// second.style.height = '25px';
-// third.style.width = '25px';
-// third.style.height = '25px';
-// forth.style.width = '25px';
-// forth.style.height = '25px';
