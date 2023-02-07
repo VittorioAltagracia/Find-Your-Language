@@ -5,6 +5,7 @@ const germOpen = document.querySelector('.germanic-open');
 const germModals = document.querySelector('.germanic-langs');
 //germanic modals
 const gerModal = document.querySelector('.german-modal');
+console.log(gerModal);
 
 // germanic buttons
 const showGe = document.querySelector('.showGe');
@@ -67,7 +68,15 @@ async function loadData() {
   );
   const data = await response.json();
   console.log(data);
-  populateModals(data);
+  // function displayInfo() {
+  //   // const test = Object.values(data);
+  //   // console.log(test);
+  //   const tst = data.toString;
+  //   console.log(test);
+  //   germModals.textContent = test;
+  // }e
+  const test = Object.values(data);
+  populateModals(test);
 }
 
 function populateModals(myArr) {
