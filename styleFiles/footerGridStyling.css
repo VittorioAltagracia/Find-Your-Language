@@ -1,0 +1,65 @@
+.bottom-2nd {
+  display: flex;
+
+  gap: 4px;
+}
+
+.bottom-1st {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: space-evenly;
+  margin-top: 47px;
+  margin-bottom: 10px;
+  row-gap: 5px;
+}
+
+.american-chibi {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.purple-chibi {
+  grid-column: 10 / 11;
+  grid-row: 1 / 2;
+}
+
+.czech-flag {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.norway-flag {
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+}
+
+.thai-flag {
+  grid-column: 10 / 11;
+  grid-row: 2 / 3;
+}
+
+.korean-flag {
+  grid-column: 9 / 10;
+  grid-row: 1 / 2;
+}
+
+.mexican-flag {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.iran-flag {
+  grid-column: 8 / 9;
+  grid-row: 2 / 3;
+}
+
+.pakistan-flag {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.emirates-flag {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}

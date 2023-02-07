@@ -8,12 +8,9 @@ import {
   dontShowRomanceContent,
 } from './languageData/romLangs.js';
 
-import {
-  displaySlavicLangs,
-  showSerb,
-  showUkr,
-  hideElements,
-} from './languageData/slvcLangs.js';
+import { displaySlavicLangs, hideElements } from './languageData/slvcLangs.js';
+
+import { germOpen } from './languageData/germnLangs.js';
 
 export {
   spanishModal,
@@ -34,10 +31,10 @@ export {
 const start = document.querySelector('.game');
 const noInput = document.querySelector('.message');
 const inputField = document.querySelector('.yourNumber');
-const alreadyCan = document.querySelector('.already');
+// const alreadyCan = document.querySelector('.already');
 const whichOne = document.querySelector('.check');
-const bottom = document.querySelector('.bottom');
-// !!! selecting modals and buttons !!!
+// const bottom = document.querySelector('.bottom');
+// ! selecting modals and buttons !
 
 // Spanish
 const spanishModal = document.querySelector('.spanish-modal');
@@ -213,6 +210,7 @@ whichOne.addEventListener('click', function () {
         ? (displayMessage(`${responses.positiveAnswer}`),
           dontShowRomanceContent(),
           hideElements.dontShowSlavicContent(),
+          germOpen.classList.remove('hidden'),
           showColdBlue())
         : displayMessage(`${responses.anotherOption}`);
     }
@@ -266,13 +264,3 @@ whichOne.addEventListener('click', function () {
     }
   }
 });
-
-// COME BACK TO THIS WHEN YOU LEARN MORE
-// first.style.width = '25px';
-// first.style.height = '25px';
-// second.style.width = '25px';
-// second.style.height = '25px';
-// third.style.width = '25px';
-// third.style.height = '25px';
-// forth.style.width = '25px';
-// forth.style.height = '25px';
